@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Dr. Komal Rani | Rani Multispeciality Dental Clinic</title>
+    <meta name="description" content="Meet Dr. Komal Rani, an expert dentist dedicated to providing the best, painless dental care in Ranchi.">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/components.js" defer></script>
+    <style>
+        .about-section {
+            padding: 100px 0;
+            background-color: var(--white);
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .doctor-img-placeholder {
+            width: 100%;
+            height: 500px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 5rem;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        .doctor-img-placeholder::after {
+            content: 'Dr. Komal Rani';
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            background: rgba(0,0,0,0.5);
+            padding: 5px 15px;
+            border-radius: 30px;
+        }
+        .about-text h1 {
+            color: var(--primary-blue);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+        .qualifications {
+            margin-top: 30px;
+        }
+        .qualifications li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+        .qualifications li::before {
+            content: '✓';
+            color: var(--primary-green);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <site-navbar></site-navbar>
+
+    <main>
+        <section class="about-section">
+            <div class="container about-grid">
+                <div class="doctor-img-placeholder">
+                    👩‍⚕️
+                </div>
+                <div class="about-text">
+                    <h1>Dr. Komal Rani</h1>
+                    <h3 style="color: var(--primary-green); margin-bottom: 20px;">Chief Dental Surgeon</h3>
+                    <p>Dr. Komal Rani is a highly skilled and compassionate dental professional dedicated to providing comprehensive oral health care. With a focus on pain-free treatments and patient education, she ensures that every visit is a comfortable and positive experience.</p>
+                    
+                    <p>At Rani Multispeciality Dental Clinic, she specializes in advanced restorative procedures, cosmetic dentistry, and preventive care, utilizing the latest modern equipment and techniques to deliver optimal results.</p>
+                    
+                    <ul class="qualifications">
+                        <li>Expert in Digital Smile Design & Facial Aesthetics</li>
+                        <li>Advanced Training in Laser Dentistry</li>
+                        <li>Specialized in Painless Root Canal Treatments</li>
+                        <li>Committed to Long-term Patient Oral Health</li>
+                    </ul>
+                    
+                    <a href="appointment.html" class="btn btn-primary" style="margin-top: 30px;">Consult Dr. Komal Rani</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <site-footer></site-footer>
+    <whatsapp-button></whatsapp-button>
+</body>
+</html>

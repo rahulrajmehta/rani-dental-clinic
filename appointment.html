@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment | Rani Multispeciality Dental Clinic</title>
+    <meta name="description" content="Book your dental appointment online at Rani Multispeciality Dental Clinic.">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/components.js" defer></script>
+    <style>
+        .page-header {
+            background-color: var(--secondary-green);
+            padding: 80px 0;
+            text-align: center;
+        }
+        .appointment-section {
+            padding: 80px 0;
+        }
+        .appointment-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+        .appointment-info {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 50px;
+        }
+        .appointment-info h2 {
+            color: white;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+        .appointment-info h2::after {
+            left: 0;
+            transform: none;
+            background-color: var(--primary-green);
+        }
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .info-item i {
+            font-size: 1.5rem;
+            color: var(--primary-green);
+        }
+        
+        .appointment-form {
+            padding: 50px;
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-green);
+            box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.2);
+        }
+        textarea.form-control {
+            resize: vertical;
+            height: 120px;
+        }
+        
+        @media (max-width: 768px) {
+            .appointment-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <site-navbar></site-navbar>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Book an Appointment</h1>
+                <p style="color: var(--text-dark);">Schedule your visit and take the first step towards a healthier smile.</p>
+            </div>
+        </section>
+
+        <section class="appointment-section container">
+            <div class="appointment-container">
+                
+                <div class="appointment-info">
+                    <h2>Contact Information</h2>
+                    <p style="margin-bottom: 40px; color: #e0e0e0;">Have questions or need immediate assistance? Feel free to reach out to us directly or visit our clinic.</p>
+                    
+                    <div class="info-item">
+                        <i>📍</i>
+                        <div>
+                            <h4>Visit Us</h4>
+                            <p style="color: #e0e0e0;">Kathal More - Argora - Ranchi Rd,<br>beside TVs Showroom, near Padosan Hotel,<br>Ranchi, Jharkhand 835303</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i>📞</i>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p style="color: #e0e0e0;">+91 8340547519<br>+91 6299917464<br>033 71981800</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i>🕒</i>
+                        <div>
+                            <h4>Clinic Hours</h4>
+                            <p style="color: #e0e0e0;">Monday - Saturday: 10:00 AM - 8:00 PM<br>Sunday: By Appointment</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="appointment-form">
+                    <h2 style="text-align: left; margin-bottom: 30px;">Request an Appointment</h2>
+                    <form onsubmit="event.preventDefault(); alert('Appointment request sent successfully! We will contact you shortly to confirm your timing.'); this.reset();">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control" required placeholder="+91 XXXXXXXXXX">
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Preferred Date</label>
+                            <input type="date" id="date" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Treatment / Service Needed</label>
+                            <select id="service" class="form-control">
+                                <option value="">Select a service...</option>
+                                <option value="checkup">General Checkup</option>
+                                <option value="root_canal">Root Canal Treatment</option>
+                                <option value="implants">Dental Implants</option>
+                                <option value="braces">Braces / Aligners</option>
+                                <option value="whitening">Teeth Whitening</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Additional Message (Optional)</label>
+                            <textarea id="message" class="form-control" placeholder="Any specific issues or symptoms..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Book Now</button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <site-footer></site-footer>
+    <whatsapp-button></whatsapp-button>
+</body>
+</html>

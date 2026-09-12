@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials | Rani Multispeciality Dental Clinic</title>
+    <meta name="description" content="Read reviews from our satisfied patients about their pain-free and comfortable dental treatments at Rani Multispeciality Dental Clinic.">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/components.js" defer></script>
+    <style>
+        .page-header {
+            background-color: var(--secondary-green);
+            padding: 80px 0;
+            text-align: center;
+        }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 80px 0;
+        }
+        .review-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        .review-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 5rem;
+            color: var(--secondary-blue);
+            font-family: serif;
+            line-height: 1;
+        }
+        .stars {
+            color: #FFD700;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        .reviewer-name {
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .avatar {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-green);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <site-navbar></site-navbar>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>What Our Patients Say</h1>
+                <p style="color: var(--text-dark);">Real stories from real smiles.</p>
+            </div>
+        </section>
+
+        <section class="container testimonials-grid">
+            
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"Great experience! The staff was polite, the doctor explained everything clearly, and the treatment was painless. Highly recommended!"</p>
+                <div class="reviewer-name">
+                    <div class="avatar" style="background-color: #3498db;">S</div>
+                    <div>
+                        Shilpi Sharma<br>
+                        <span style="font-size: 0.8rem; color: var(--text-light); font-weight: normal;">6 months ago</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"Very good clinic with all modern equipments and facilities and very friendly dentist. Very good service"</p>
+                <div class="reviewer-name">
+                    <div class="avatar" style="background-color: #1abc9c;">P</div>
+                    <div>
+                        Pooja Kashyap<br>
+                        <span style="font-size: 0.8rem; color: var(--text-light); font-weight: normal;">6 months ago</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"Had great experience with Dr Komal Rani as she helps in overall dental care. She will treat you for the problem, and at the same time will guide for routines to avoid future decay. Highly highly recommended for any one looking for long term oral health. Also clinic is equipped with all the modern amenities and technology."</p>
+                <div class="reviewer-name">
+                    <div class="avatar" style="background-color: #e67e22;">S</div>
+                    <div>
+                        SONU RAJA SINGH<br>
+                        <span style="font-size: 0.8rem; color: var(--text-light); font-weight: normal;">6 months ago</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"Had my root canal treatment done here. The doctor was professional, explained everything clearly, and the procedure was smooth with minimal pain. Clinic is clean and well maintained. Satisfied with the treatment."</p>
+                <div class="reviewer-name">
+                    <div class="avatar" style="background-color: #9b59b6;">T</div>
+                    <div>
+                        Tanishq<br>
+                        <span style="font-size: 0.8rem; color: var(--text-light); font-weight: normal;">5 months ago</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <site-footer></site-footer>
+    <whatsapp-button></whatsapp-button>
+</body>
+</html>

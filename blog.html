@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Rani Multispeciality Dental Clinic</title>
+    <meta name="description" content="Read our latest blog posts on oral health, dental hygiene, and treatments at Rani Multispeciality Dental Clinic.">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/components.js" defer></script>
+    <style>
+        .page-header {
+            background-color: var(--secondary-blue);
+            padding: 80px 0;
+            text-align: center;
+        }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 80px 0;
+        }
+        .blog-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        .blog-img {
+            height: 200px;
+            background: var(--primary-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+        .blog-content {
+            padding: 30px;
+        }
+        .blog-meta {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .blog-title {
+            color: var(--primary-blue);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        .blog-excerpt {
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+        .read-more {
+            color: var(--primary-green);
+            font-weight: 600;
+            display: inline-block;
+        }
+        .read-more:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <site-navbar></site-navbar>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Dental Care Blog</h1>
+                <p style="color: var(--text-light);">Tips, insights, and news for maintaining a healthy smile.</p>
+            </div>
+        </section>
+
+        <section class="container blog-grid">
+            <article class="blog-card">
+                <div class="blog-img" style="background-color: var(--secondary-blue);">🦷</div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span>May 15, 2026</span>
+                        <span>Oral Health</span>
+                    </div>
+                    <h2 class="blog-title">5 Daily Habits for a Cavity-Free Smile</h2>
+                    <p class="blog-excerpt">Maintaining good oral hygiene doesn't have to be complicated. Discover the 5 essential habits that will keep your teeth healthy and cavity-free.</p>
+                    <a href="#" class="read-more" onclick="event.preventDefault(); alert('Full blog post feature coming soon!');">Read More →</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-img" style="background-color: var(--secondary-green);">⚡</div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span>April 22, 2026</span>
+                        <span>Treatments</span>
+                    </div>
+                    <h2 class="blog-title">The Benefits of Laser Dentistry</h2>
+                    <p class="blog-excerpt">Laser technology has revolutionized dental treatments. Learn how it provides painless, faster, and more effective procedures compared to traditional methods.</p>
+                    <a href="#" class="read-more" onclick="event.preventDefault(); alert('Full blog post feature coming soon!');">Read More →</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-img" style="background-color: #f1c40f; color: white;">😁</div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span>March 10, 2026</span>
+                        <span>Cosmetic</span>
+                    </div>
+                    <h2 class="blog-title">Is Digital Smile Design Right for You?</h2>
+                    <p class="blog-excerpt">Digital Smile Design (DSD) allows you to preview your perfect smile before the treatment even begins. Find out how this incredible technology works.</p>
+                    <a href="#" class="read-more" onclick="event.preventDefault(); alert('Full blog post feature coming soon!');">Read More →</a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <site-footer></site-footer>
+    <whatsapp-button></whatsapp-button>
+</body>
+</html>
